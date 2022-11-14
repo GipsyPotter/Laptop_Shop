@@ -84,6 +84,29 @@ class Shop:
         for laptop in self.laptops:
             laptop.export_info()
 
+    def change_value(self, id_laptop, name, value):
+        for laptop in self.laptops:
+            if laptop.id.value == id_laptop:
+                if name == "brand":
+                    laptop.brand.value = value
+                elif name == "name":
+                    laptop.name.value = value
+                elif name == "cpu":
+                    laptop.cpu.value = value
+                elif name == "gpu":
+                    laptop.gpu.value = value
+                elif name == "ram":
+                    laptop.ram.value = value
+                elif name == "storage":
+                    laptop.storage.value = value
+                elif name == "price":
+                    laptop.price.value = value
+                elif name == "id":
+                    laptop.id.value = value
+                else:
+                    print("ERROR")
+                    break
+
 
 if __name__ == "__main__":
     shop = Shop()

@@ -1,4 +1,4 @@
-T440p, Lenovo, Thinkpad T440p, Intel Core i7-4600U 2.1GHz,Intel HD Graphics 4600, 8GB DDR3, 500GB SSD, 9000000, 1, 30
-Tuf_Gaming, Asus, Tuf Gaming A15, AMD Ryzen 7 4800H 2.9GHz,AMD Radeon RX 5600M, 16GB DDR4, 512GB SSD, 29000000, 2, 15
-Yoga_730, Lenovo, Yoga 730, Intel Core i7-8550U 1.8GHz,Intel UHD Graphics 620, 8GB DDR4, 256GB SSD, 18000000, 3, 90
-Legion_5, Lenovo, Legion 5, AMD Ryzen 7 4800H 2.9GHz,AMD Radeon RX 5600M, 16GB DDR4, 512GB SSD, 30000000, 4, 4
+Lenovo, Thinkpad T440p, Intel Core i7-4600U 2.1GHz,Intel HD Graphics 4600, 8GB DDR3, 500GB SSD, 9000000, 1, 30
+Asus, Tuf Gaming A15, AMD Ryzen 7 4800H 2.9GHz,AMD Radeon RX 5600M, 16GB DDR4, 512GB SSD, 29000000, 2, 15
+Lenovo, Yoga 730, Intel Core i7-8550U 1.8GHz,Intel UHD Graphics 620, 8GB DDR4, 256GB SSD, 18000000, 3, 90
+Lenovo, Legion 5, AMD Ryzen 7 4800H 2.9GHz,AMD Radeon RX 5600M, 16GB DDR4, 512GB SSD, 30000000, 4, 4
