@@ -92,6 +92,12 @@ class Shop:
     def add_productlst(self, laptoplst):
         self.laptops.extend(laptoplst)
 
+    def replace(self, id, laptop):
+        for i in range(len(self.laptops)):
+            if self.laptops[i].id.value == id:
+                self.laptops[i] = laptop
+                break
+
     def read_file(self):
         f = open("laptop.txt", "r")
         for line in f:
@@ -108,7 +114,9 @@ class Shop:
         for laptop in self.laptops:
             if laptop.id.value == id:
                 laptop.change_value(name, value)
+                self.replace(id, laptop)
                 break
+
 
     def write_file(self):
         f = open("laptop.txt", "w")
