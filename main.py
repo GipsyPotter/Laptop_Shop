@@ -61,6 +61,26 @@ class Laptop:
         self.price.export_info()
         self.id.export_info()
 
+    def change_value(self, name, value):
+        if name == "brand":
+            self.brand.value = value
+        elif name == "name":
+            self.name.value = value
+        elif name == "cpu":
+            self.cpu.value = value
+        elif name == "gpu":
+            self.gpu.value = value
+        elif name == "ram":
+            self.ram.value = value
+        elif name == "storage":
+            self.storage.value = value
+        elif name == "price":
+            self.price.value = value
+        elif name == "id":
+            self.id.value = value
+        else:
+            print("Invalid name")
+
 
 class Shop:
     def __init__(self):
@@ -84,31 +104,23 @@ class Shop:
         for laptop in self.laptops:
             laptop.export_info()
 
-    def change_value(self, id_laptop, name, value):
+    def change_value(self, id, name, value):
         for laptop in self.laptops:
-            if laptop.id.value == id_laptop:
-                if name == "brand":
-                    laptop.brand.value = value
-                elif name == "name":
-                    laptop.name.value = value
-                elif name == "cpu":
-                    laptop.cpu.value = value
-                elif name == "gpu":
-                    laptop.gpu.value = value
-                elif name == "ram":
-                    laptop.ram.value = value
-                elif name == "storage":
-                    laptop.storage.value = value
-                elif name == "price":
-                    laptop.price.value = value
-                elif name == "id":
-                    laptop.id.value = value
-                else:
-                    print("ERROR")
-                    break
+            if laptop.id.value == id:
+                laptop.change_value(name, value)
+                break
+
+    def write_file(self):
+        f = open("laptop.txt", "w")
+        for laptop in self.laptops:
+            f.write(
+                f"{laptop.brand.value},{laptop.name.value},{laptop.cpu.value},{laptop.gpu.value},{laptop.ram.value},{laptop.storage.value},{laptop.price.value},{laptop.id.value}\n")
+        f.close()
 
 
 if __name__ == "__main__":
     shop = Shop()
     shop.read_file()
+    shop.export_info()
+    shop.change_value("1", "brand", "Dell")
     shop.export_info()
